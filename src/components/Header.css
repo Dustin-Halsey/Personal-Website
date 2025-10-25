@@ -10,6 +10,7 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     border-radius: 1.5rem;
     box-shadow: 0 4px 8px color-mix(in srgb, var(--background-secondary) 0%, #000000 80%), inset 2px 2px 4px color-mix(in srgb, var(--background-secondary) 0%, #ffffff 35%);
     backdrop-filter: blur(5px);
@@ -20,7 +21,7 @@
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     border-radius: 2rem;
     transition: all 0.3s ease;
     cursor: pointer;
