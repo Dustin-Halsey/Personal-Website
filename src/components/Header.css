@@ -1,0 +1,62 @@
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: color-mix(in srgb, var(--background-secondary) 75%, transparent 25%);
+    margin: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px color-mix(in srgb, var(--background-secondary) 0%, #000000 80%), inset 2px 2px 4px color-mix(in srgb, var(--background-secondary) 0%, #ffffff 35%);
+    backdrop-filter: blur(10px);
+}
+
+/* Navigation Links */
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+    background-color: var(--hover-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/Click Effects */
+.nav-link:active {
+    background-color: var(--select-primary);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus Effects for Accessibility */
+.nav-link:focus {
+    outline: 2px solid var(--select-primary);
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .nav-link {
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+}

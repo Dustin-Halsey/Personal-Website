@@ -1,30 +1,15 @@
 import { Link } from 'react-router-dom'
-import { CSSProperties } from 'react'
+import './Header.css'
 
 /** Simple navigation for portfolio site */
-export default function Header(): JSX.Element {
-    const style: CSSProperties = {
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '2rem',
-        padding: '1rem',
-        backgroundColor: '#f8f9fa',
-        borderBottom: '1px solid #dee2e6'
-    };
-
-    const linkStyle: CSSProperties = {
-        textDecoration: 'none',
-        color: '#333',
-        fontWeight: '500'
-    };
-
+export default function Header() {
     return (
-        <nav style={style}>
-            <Link to="/" style={linkStyle}>Home</Link>
-            <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
-            <Link to="/projects" style={linkStyle}>Projects</Link>
-            <Link to="/resume" style={linkStyle}>Resume</Link>
-            <Link to="/contact" style={linkStyle}>Contact</Link>
+        <nav className="nav-container">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/portfolio" className="nav-link">Portfolio</Link>
+            <Link to="/projects" className="nav-link">Projects</Link>
+            <Link to="/resume" className="nav-link">Resume</Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
         </nav>
     );
 }
