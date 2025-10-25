@@ -3,9 +3,20 @@
   line-height: 1.5;
   font-weight: 400;
 
+  /* Global Color Variables */
+  --primary-color: #646cff;
+  --primary-hover: #535bf2;
+  --hyperlink: #ff751a;
 
-  color: #ffffff;
-  background-color: #242424;
+  --text-primary: #ffffff;
+  --text-secondary: #888;
+
+  --background-primary: #242424;
+  --background-secondary: #1a1a1a;
+
+
+  color: var(--text-primary);
+  background-color: var(--background-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
