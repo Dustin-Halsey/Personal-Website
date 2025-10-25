@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
+import { CSSProperties } from 'react'
 
 /** Simple navigation for portfolio site */
-export default function Header() {
-    const style = {
+export default function Header(): JSX.Element {
+    const style: CSSProperties = {
         display: 'flex',
         justifyContent: 'center',
         gap: '2rem',
@@ -11,7 +12,7 @@ export default function Header() {
         borderBottom: '1px solid #dee2e6'
     };
 
-    const linkStyle = {
+    const linkStyle: CSSProperties = {
         textDecoration: 'none',
         color: '#333',
         fontWeight: '500'

@@ -1,4 +1,4 @@
-function Projects() {
+function Projects(): JSX.Element {
     return (
         <div>
             <h1>Side Projects</h1>

@@ -1,4 +1,4 @@
-function Resume() {
+function Resume(): JSX.Element {
     return (
         <div>
             <h1>My Resume</h1>

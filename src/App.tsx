@@ -1,13 +1,13 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from "./components/Header.jsx"
-import Home from "./components/Home.jsx"
-import Portfolio from "./components/Portfolio.jsx"
-import Projects from "./components/Projects.jsx"
-import Resume from "./components/Resume.jsx"
-import Contact from "./components/Contact.jsx"
+import Header from "./components/Header"
+import Home from "./components/Home"
+import Portfolio from "./components/Portfolio"
+import Projects from "./components/Projects"
+import Resume from "./components/Resume"
+import Contact from "./components/Contact"
 
-function App() {
+function App(): JSX.Element {
     return (
         <Router>
             <Header />

@@ -1,4 +1,4 @@
-function Home() {
+function Home(): JSX.Element {
     return (
         <div>
             <h1>Welcome to My Portfolio</h1>
