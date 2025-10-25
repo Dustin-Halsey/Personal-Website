@@ -12,14 +12,15 @@ export default function ProjectContainerWrapper({ children }: ProjectContainerWr
         alignItems: 'center',
         justifyContent: 'center',
         background: `linear-gradient(var(--gradient-degrees), 
-        var(--background-secondary) 0%, 
-        color-mix(in srgb, var(--background-secondary) var(--gradient-lighten-percentage), #ffffff) 50%, 
-        var(--background-secondary) 100%)`,
+        color-mix(in srgb, var(--background-secondary) 80%, transparent) 0%, 
+        color-mix(in srgb, var(--background-secondary) 60%, transparent) 50%, 
+        color-mix(in srgb, var(--background-secondary) 80%, transparent) 100%)`,
         boxShadow: '4px 4px 8px color-mix(in srgb, var(--background-secondary) 0%, #000000 15%), inset 2px 2px 4px color-mix(in srgb, var(--background-secondary) 0%, #ffffff 10%)',
         padding: '2rem',
         margin: '50px auto',
         maxWidth: '1200px',
         width: 'calc(100% - 100px)',
+        backdropFilter: 'blur(5px)',
     };
 
 

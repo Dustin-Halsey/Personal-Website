@@ -23,6 +23,7 @@ canvas {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  text-align: center;
 
   /* Global Color Variables */
 
@@ -61,4 +62,14 @@ canvas {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--hyperlink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-primary);
+  text-decoration: underline;
 }
