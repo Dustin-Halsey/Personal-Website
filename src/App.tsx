@@ -9,22 +9,9 @@ import Contact from "./components/Contact"
 
 function App() {
     useEffect(() => {
-        let cleanup: (() => void) | null = null;
-        
-        // Import and initialize the starfield animation
-        // @ts-ignore
         import('./js/animateHome.js').then((module: any) => {
-            cleanup = module.initStarfield();
-        }).catch(error => {
-            console.error('Failed to load starfield animation:', error);
+            module.initStarfield();
         });
-        
-        // Cleanup function
-        return () => {
-            if (cleanup) {
-                cleanup();
-            }
-        };
     }, []);
 
     return (

@@ -1,9 +1,13 @@
-import { JSX } from "react"
+import { CSSProperties, JSX } from "react"
 import ProjectContainerWrapper from "./ProjectContainerWrapper"
 
 function Resume(): JSX.Element {
+    const style: CSSProperties = {
+        textAlign: 'left',
+    };
+
     return (
-        <ProjectContainerWrapper>
+        <ProjectContainerWrapper style={style}>
             Education <br/>
             University of California, Santa Cruz 2019 <br/>
             BS - Honors in Computer Science: Computer Game design <br/>

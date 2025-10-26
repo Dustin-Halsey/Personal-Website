@@ -40,10 +40,30 @@ function initStarfield() {
    step();
    
    window.onresize = resize;
-   canvas.onmousemove = onMouseMove;
-   canvas.ontouchmove = onTouchMove;
-   canvas.ontouchend = onMouseLeave;
-   document.onmouseleave = onMouseLeave;
+   
+   // Simple mouse tracking
+   let lastMouseX = 0;
+   let lastMouseY = 0;
+   
+   const trackMouse = (e) => {
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+   };
+   
+   // Polling system to maintain animation even over iframes
+   const pollMousePosition = () => {
+      if (lastMouseX !== 0 || lastMouseY !== 0) {
+         movePointer(lastMouseX, lastMouseY);
+      }
+   };
+   
+   const mousePollInterval = setInterval(pollMousePosition, 16);
+   
+   // Basic event listeners
+   document.addEventListener('mousemove', trackMouse);
+   document.addEventListener('touchmove', onTouchMove);
+   document.addEventListener('touchend', onMouseLeave);
+   document.addEventListener('mouseleave', onMouseLeave);
    
    function generate() {
    
@@ -257,10 +277,11 @@ function initStarfield() {
          cancelAnimationFrame(animationId);
       }
       window.onresize = null;
-      canvas.onmousemove = null;
-      canvas.ontouchmove = null;
-      canvas.ontouchend = null;
-      document.onmouseleave = null;
+      clearInterval(mousePollInterval);
+      document.removeEventListener('mousemove', trackMouse);
+      document.removeEventListener('touchmove', onTouchMove);
+      document.removeEventListener('touchend', onMouseLeave);
+      document.removeEventListener('mouseleave', onMouseLeave);
    };
 }
 
