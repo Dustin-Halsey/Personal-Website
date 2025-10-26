@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode } from "react";
 import ProjectContainerWrapper from "./ProjectContainerWrapper";
 
 const fallbackTitle = "--- [ MISSING PROJECT NAME ] ---";
@@ -69,34 +69,16 @@ interface ProjectContainerProps {
 }
 
 export default function ProjectContainer({ title = fallbackTitle, children = undefined, src = '', href }: ProjectContainerProps) {
-    const ref = useRef<HTMLDivElement>(null);
-    const [visible, setVisible] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              setVisible(true);
-              observer.disconnect();
-            }
-          },
-          { rootMargin: "400px" } // start loading 400 px before entering viewport
-        );
-        if (ref.current) observer.observe(ref.current);
-        return () => observer.disconnect();
-      }, []);
-
     return (<>
         <h1 style={headerStyle}>
             {title}
         </h1>
-        {visible && <ProjectContainerWrapper ref={ref}>
+        <ProjectContainerWrapper>
             {children}
             {!!src && !href && 
                 <IFrame src={src} title={title}/>
             }
             {!!href && <HRef href={href} src={src}/>}
-        </ProjectContainerWrapper>}
-        {!visible && <div ref={ref} style={{ height: '300px', margin: '50px auto' }} />}
+        </ProjectContainerWrapper>
     </>);
 }

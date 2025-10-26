@@ -15,7 +15,10 @@ function Portfolio(): JSX.Element {
             
         </ProjectContainer>
         {/* ------------------------------------------------------------------------------------------------------- */}
-        <ProjectContainer title="Wacktory (C#)">
+        <ProjectContainer 
+            title="Wacktory (C#)"
+            src="https://www.youtube.com/embed/bkwjrYXHHF0"
+        >
             <p> <a href="https://www.wacktory.com/"> Wacktory™</a> is a new take on cooperative gameplay that bridges the gap between virtual reality and traditional couch co-op gaming. 
                 Thrown into a factory full of chaos and OSHA violations galore, two couch players must work together with their VR counterpart 
                 to make colored cubes and fulfill orders for trucks before time runs out.
@@ -36,6 +39,7 @@ function Portfolio(): JSX.Element {
             <li> Tested and finalized game builds at various stages of production, including submission of the final build to 
                 <a href="https://store.steampowered.com/app/1082750/Wacktory/">Steam</a>. 
             </li>
+            <br/>
         </ProjectContainer>
         {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer 
