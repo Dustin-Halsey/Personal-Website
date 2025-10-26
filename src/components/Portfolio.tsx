@@ -7,7 +7,11 @@ function Portfolio(): JSX.Element {
     };
     
     return (<div style={style}>
-    <ProjectContainer title="HeroForge (JS)">
+    <ProjectContainer 
+        title="HeroForge (JS)"
+        src="src/assets/Heroforge001.png"
+        href="https://www.heroforge.com/load_config%3D43360789/"
+    >
         
     </ProjectContainer>
         <ProjectContainer title="Wacktory (C#)">
@@ -34,7 +38,11 @@ function Portfolio(): JSX.Element {
             title="Alien Invasion (JS) - 2017"
             src = "/games/alienInvasion/index.html">
         </ProjectContainer>
-        <ProjectContainer title="Falling Up (JS) - 2017">
+        
+        <ProjectContainer 
+            title="Falling Up (JS) - 2017"
+            src = "/games/fallingUp/EndlessRunnerGame/index.html"
+        >
             
         </ProjectContainer>
         <ProjectContainer title="StarCraft II AI Bot (C++) - 2018">

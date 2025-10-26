@@ -1,5 +1,6 @@
 import { CSSProperties, JSX } from "react";
 import ProjectContainerWrapper from "./ProjectContainerWrapper.tsx";
+import Carousel from "./Carousel.tsx";
 
 const testText1 = `Lorem ipsum dolor sit amet consectetur adipiscing elit.
 Quisque faucibus ex sapien vitae pellentesque sem placerat.\n\n
@@ -39,16 +40,6 @@ function Home(): JSX.Element {
         minWidth: '200px',
     };
 
-    const carouselStyle :CSSProperties = {
-        aspectRatio: '16/9',
-        width: '100%',
-        backgroundColor: 'var(--background-secondary)',
-        borderRadius: '0.5rem',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-
     return (
         <div>
             <ProjectContainerWrapper>
@@ -59,11 +50,13 @@ function Home(): JSX.Element {
                         {testText1}
                     </div>
                     <div style={rightColumnStyle}> 
-                        <div style={{fontSize: 'var(--font-size-4xl)', lineHeight: 1}}>Dustin Halsey</div>
-                        <div style={{fontSize: 'var(--font-size-xl)', margin: '0', lineHeight: 1}}>Software Engineer</div>
-                        <div style={carouselStyle}>
-                            
+                        <div style={{fontSize: 'var(--font-size-4xl)', lineHeight: 1}}>
+                            Dustin Halsey
                         </div>
+                        <div style={{fontSize: 'var(--font-size-xl)', margin: '0', lineHeight: 1}}>
+                            Software Engineer
+                        </div>
+                        <Carousel/>
                     </div>
                 </div>
             </ProjectContainerWrapper>
