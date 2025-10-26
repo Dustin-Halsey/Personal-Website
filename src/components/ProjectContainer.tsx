@@ -1,17 +1,10 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import ProjectContainerWrapper from "./ProjectContainerWrapper";
 
 const fallbackTitle = "--- [ MISSING PROJECT NAME ] ---";
 
 const width = '90%';
 const maxWidth = '100%';
-
-interface ProjectContainerProps {
-    title?: string;
-    children?: ReactNode;
-    src?:string;
-    href?:string; // Used if linking to a webpage (pass in frame image to src)
-}
 
 const headerStyle: CSSProperties = {
     textAlign: 'center',
@@ -22,6 +15,7 @@ const srcStyle: CSSProperties = {
     width: width,
     maxWidth: maxWidth,
     aspectRatio: 16/9,
+    border: 'none'
 }
 
 const linkStyle: CSSProperties = {
@@ -39,12 +33,11 @@ const IFrame = ({ src, title }: { src: string, title: string }) => {
         name={title} 
         style={srcStyle}
         scrolling="no"
-        frameBorder="0"
         allowFullScreen
+        loading="lazy"
     >   
         <p>Your browser does not support iframes.</p>
     </iframe>
-
     )
 }
 
@@ -61,25 +54,49 @@ const HRef = ({ href, src }: { href: string, src?: string }) => {
                     src={src} 
                     alt="Project preview" 
                     style={linkStyle}
+                    loading="lazy"
                 />
             )}
         </a>
     );
 }
 
-export default function ProjectContainer({ title = fallbackTitle, children = undefined, src = '', href }: ProjectContainerProps) {
+interface ProjectContainerProps {
+    title?: string;
+    children?: ReactNode;
+    src?:string;  // Placed into an iFrame
+    href?:string; // Used if linking to a webpage (pass in frame image to src)
+}
 
+export default function ProjectContainer({ title = fallbackTitle, children = undefined, src = '', href }: ProjectContainerProps) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setVisible(true);
+              observer.disconnect();
+            }
+          },
+          { rootMargin: "400px" } // start loading 400 px before entering viewport
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+      }, []);
 
     return (<>
         <h1 style={headerStyle}>
             {title}
         </h1>
-        <ProjectContainerWrapper>
+        {visible && <ProjectContainerWrapper ref={ref}>
             {children}
             {!!src && !href && 
                 <IFrame src={src} title={title}/>
             }
             {!!href && <HRef href={href} src={src}/>}
-        </ProjectContainerWrapper>
+        </ProjectContainerWrapper>}
+        {!visible && <div ref={ref} style={{ height: '300px', margin: '50px auto' }} />}
     </>);
 }

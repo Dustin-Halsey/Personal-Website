@@ -7,13 +7,14 @@ function Portfolio(): JSX.Element {
     };
     
     return (<div style={style}>
-    <ProjectContainer 
-        title="HeroForge (JS)"
-        src="src/assets/Heroforge001.png"
-        href="https://www.heroforge.com/load_config%3D43360789/"
-    >
-        
-    </ProjectContainer>
+        <ProjectContainer 
+            title="HeroForge (JS)"
+            src="src/assets/Heroforge001.png"
+            href="https://www.heroforge.com/load_config%3D43360789/"
+        >
+            
+        </ProjectContainer>
+        {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer title="Wacktory (C#)">
             <p> <a href="https://www.wacktory.com/"> Wacktory™</a> is a new take on cooperative gameplay that bridges the gap between virtual reality and traditional couch co-op gaming. 
                 Thrown into a factory full of chaos and OSHA violations galore, two couch players must work together with their VR counterpart 
@@ -32,40 +33,40 @@ function Portfolio(): JSX.Element {
             <li > Served as Lead Programmer and Technical Artist for a team of 12, implementing and overseeing the production of the core game systems. </li>
             <li > Responsible for the implementation of all Virtual Reality mechanics and interactions. </li>
             <li > Created Wacktory’s shader system from scratch to give the game its unique cartoony aesthetic.</li>
-            <li> Tested and finalized game builds at various stages of production, including submission of the final build to <a href="https://store.steampowered.com/app/1082750/Wacktory/">Steam</a>. </li>
+            <li> Tested and finalized game builds at various stages of production, including submission of the final build to 
+                <a href="https://store.steampowered.com/app/1082750/Wacktory/">Steam</a>. 
+            </li>
         </ProjectContainer>
+        {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer 
             title="Alien Invasion (JS) - 2017"
-            src = "/games/alienInvasion/index.html">
+            src = "/games/alienInvasion/index.html"
+        >
+
         </ProjectContainer>
-        
+        {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer 
             title="Falling Up (JS) - 2017"
             src = "/games/fallingUp/EndlessRunnerGame/index.html"
         >
             
         </ProjectContainer>
-        <ProjectContainer title="StarCraft II AI Bot (C++) - 2018">
-        <iframe 
+        {/* ------------------------------------------------------------------------------------------------------- */}
+        <ProjectContainer 
+            title="StarCraft II AI Bot (C++) - 2018"
             src="https://www.youtube.com/embed/1jSNsDg4DbE" 
-            title="Custom StarCraft II Bot" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin" 
-            allowFullScreen
-            style={{
-                width: '100%',
-                height: '56.25%',
-                aspectRatio: '16/9',
-                border: 'none'
-            }}
-        ></iframe>
+        >
+        
         </ProjectContainer>
+        {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer title="Recedence (GML) - 2017">
             
         </ProjectContainer>
+        {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer title="Virus Assault (Blitz Basic) - 2015">
             
         </ProjectContainer>
+        {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer title="This Website (React/TS) - 2025">
             
         </ProjectContainer>

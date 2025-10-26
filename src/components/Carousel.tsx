@@ -10,6 +10,8 @@ export default function Carousel() {
         backgroundColor:'#333333',
         borderRadius: '0.25em',
         margin: '5px',
+        display:'flex',
+        flexDirection:'row',
     };
 
     return (
