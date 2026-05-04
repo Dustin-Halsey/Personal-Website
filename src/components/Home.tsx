@@ -25,8 +25,8 @@ function Home(): JSX.Element {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        textAlign: 'center',
-        flex: '3 3', // flex-grow: 2, flex-shrink: 1, flex-basis: 300px
+        textAlign: 'justify',
+        flex: '3 3',
         minWidth: '300px',
     };
 
@@ -36,7 +36,7 @@ function Home(): JSX.Element {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        flex: '2 2', // flex-grow: 1, flex-shrink: 1, flex-basis: 200px
+        flex: '2 2',
         minWidth: '200px',
     };
 
@@ -45,9 +45,22 @@ function Home(): JSX.Element {
             <ProjectContainerWrapper>
                 <div style={containerStyle}>
                     <div style={leftColumnStyle}>
-                        {testText1} 
-                        <br/><br/>
-                        {testText1}
+                        <p> Welcome to the personal website of Dustin Halsey. I am a software engineer with a background 
+                            in computer game design and a strong focus on building interactive, visually rich applications. 
+                            I graduated from the University of California, Santa Cruz with a Bachelor of Science in 
+                            Computer Science: Computer Game Design, and have spent the past several years working professionally 
+                            in the field, including six years as a software engineer at Hero Forge.
+                        </p>
+                        <p> As a developer, I enjoy working across the stack and taking projects from concept to fully realized 
+                            systems. While my foundation is in game development, I have broadened my work to include general 
+                            software engineering, web development, and real-time 3D applications. I'm especially drawn to 
+                            problems that involve both technical depth and user-facing interactivity, where performance, 
+                            design, and implementation all intersect.
+                        </p>
+                        <p>
+                            This site showcases my résumé, portfolio of professional and personal projects, and a collection 
+                            of experiments and side work. If you'd like to connect, feel free to reach out.
+                        </p>
                     </div>
                     <div style={rightColumnStyle}> 
                         <div style={{fontSize: 'var(--font-size-4xl)', lineHeight: 1}}>

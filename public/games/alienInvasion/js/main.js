@@ -285,12 +285,12 @@ Great.prototype = {
   create: function() {
     game.add.image(0, 0, 'atlas2', 'scoreBg');
     //adds menu text
-     text = game.add.text(1280/2, 786/2, 'Make America Great Again.',
+     text = game.add.text(1280/2, 786/2, 'Lock and load.',
       {font: '40px Aldrich', fill: '#ffffff'});
      text.anchor.set(.5);
     text.alpha = 0;
     var tween = game.add.tween(text).to( { alpha: 1 }, 500, Phaser.Easing.Linear.None, true);
-    game.time.events.add(Phaser.Timer.SECOND * 3, fadeGreat, this);
+    game.time.events.add(Phaser.Timer.SECOND * 2, fadeGreat, this);
   },
   update: function() {
 
@@ -600,7 +600,7 @@ Win.prototype =
 		//adds text
 		var winTitle = game.add.text(80,80, 'You Survived!!!',
 			{font: '50px Aldrich', fill: '#ffffff'});
-		var winText = game.add.text(80,200, 'Has it been 4 years already?\n I guess we can elect someone new now.\n\n',
+		var winText = game.add.text(80,200, '',
 			{font: '25px Aldrich', fill: '#ffffff'});
 
         //adds a button to the win state

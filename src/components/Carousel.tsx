@@ -1,8 +1,5 @@
 import { useCallback, useEffect, useState, KeyboardEvent } from "react"
 
-
-
-
 export default function Carousel() {
     const style= {
         width:'100%',

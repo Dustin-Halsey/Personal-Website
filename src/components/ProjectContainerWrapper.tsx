@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 
 const defaultStyle: CSSProperties = {
-    display: 'flex',
+    display: 'block',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
@@ -17,6 +17,8 @@ const defaultStyle: CSSProperties = {
     width: 'calc(100% - 100px)',
     backdropFilter: 'blur(5px)',
     borderRadius: '0.5rem',
+    textAlign: 'justify',
+    textIndent: '30px',
 };
 
 interface ProjectContainerWrapperProps {

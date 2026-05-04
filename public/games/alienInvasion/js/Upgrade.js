@@ -42,7 +42,7 @@ function createLayout(prog) {
 		upgradeText.anchor.set(.5);
 		var costText = game.add.text((room_width/2)-140, 80, 'Cost', {font: '32px Aldrich', fill: "#000000"});
 		costText.anchor.set(.5);
-		var cardText = game.add.text(room_width/1.5, 80, 'Green Cards: ' + greencards, {font: '32px Aldrich', fill: "#000000"});
+		var cardText = game.add.text(room_width/1.5, 80, 'Money: ' + greencards, {font: '32px Aldrich', fill: "#000000"});
 		cardText.anchor.set(.5);
 		var cost;
 		var upgradeCost;

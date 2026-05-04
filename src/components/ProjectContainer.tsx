@@ -15,7 +15,10 @@ const srcStyle: CSSProperties = {
     width: width,
     maxWidth: maxWidth,
     aspectRatio: 16/9,
-    border: 'none'
+    border: 'none',
+    /* center the contents */
+    display: 'block',
+    margin: '0 auto',
 }
 
 const linkStyle: CSSProperties = {
