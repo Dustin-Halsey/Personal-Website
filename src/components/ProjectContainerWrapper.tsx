@@ -13,12 +13,11 @@ const defaultStyle: CSSProperties = {
         inset   2px 2px 4px color-mix(in srgb, var(--background-secondary) 0%, #ffffff 10%)`,
     padding: '2rem',
     margin: '50px auto',
-    maxWidth: '1200px',
+    maxWidth: '1100px',
     width: 'calc(100% - 100px)',
     backdropFilter: 'blur(5px)',
     borderRadius: '0.5rem',
     textAlign: 'justify',
-    textIndent: '30px',
 };
 
 interface ProjectContainerWrapperProps {

@@ -1,0 +1,25 @@
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    flex: 3 3;
+    min-width: 300px;
+}
+.rightColumn {
+
+}
+
+.nameWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.nameTitleContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}

@@ -8,7 +8,7 @@ function Portfolio(): JSX.Element {
     
     return (<div style={style}>
         <ProjectContainer 
-            title="HeroForge (JS/React) - (2020-2026)"
+            title="HeroForge (TS/React) - (2020-2026)"
             src="src/assets/Heroforge001.png"
             href="https://www.heroforge.com/load_config%3D43360789/"
         >
@@ -26,7 +26,6 @@ function Portfolio(): JSX.Element {
                 <li>Implemented custom shaders to control lighting, materials, and visual appearance within the web-based 3D booth.</li>
                 <li>Collaborated with artists and designers to improve UX usability and visual fidelity of character customization tools.</li>
             </ul>
-            <br></br>
             Notable Large Project Contributions:
             <br></br>
             <a href='https://www.youtube.com/watch?v=3DmjJDi-hug'>Kitbash:</a>
@@ -57,13 +56,13 @@ function Portfolio(): JSX.Element {
             title="Wacktory (C#) - 2019"
             src="https://www.youtube.com/embed/bkwjrYXHHF0"
         >
-            <p> <a href="https://www.wacktory.com/"> Wacktory™</a> is a new take on cooperative gameplay that bridges the gap between virtual reality and traditional couch co-op gaming. 
+            <p> <a href="https://store.steampowered.com/app/1082750/Wacktory/"> Wacktory™</a> is a new take on cooperative gameplay that bridges the gap between virtual reality and traditional couch co-op gaming. 
                 Thrown into a factory full of chaos and OSHA violations galore, two couch players must work together with their VR counterpart 
                 to make colored cubes and fulfill orders for trucks before time runs out.
             </p>
             <p> Wacktory was created by our student group as a capstone project in the Computer Game Design department at the 
                 University of California, Santa Cruz (UCSC).  It was demoed at the 
-                <a href="https://sammys.soe.ucsc.edu/home">2019 UCSC Games Showcase</a>, the largest student game festival in the country. 
+                <a href="https://sammys.soe.ucsc.edu/home"> 2019 UCSC Games Showcase</a>, the largest student game festival in the country. 
                 This two-day event publicly showcased student games developed at the university over the 2018-2019 academic year. 
                 Out of the more than 50 games showcased, Wacktory received the <a href="https://sammys.soe.ucsc.edu/2019/awards">
                 Grand Prize for "Best Overall Experience"</a> and recognition for placing <a href="https://sammys.soe.ucsc.edu/2019/awards">
@@ -71,12 +70,14 @@ function Portfolio(): JSX.Element {
             </p>
             <br/>
             <span>Roles on the project: </span>
-            <li > Served as Lead Programmer and Technical Artist for a team of 12, implementing and overseeing the production of the core game systems. </li>
-            <li > Responsible for the implementation of all Virtual Reality mechanics and interactions. </li>
-            <li > Created Wacktory’s shader system from scratch to give the game its unique cartoony aesthetic.</li>
-            <li> Tested and finalized game builds at various stages of production, including submission of the final build to 
-                <a href="https://store.steampowered.com/app/1082750/Wacktory/">Steam</a>. 
-            </li>
+            <ul>
+                <li > Served as Lead Programmer and Technical Artist for a team of 12, implementing and overseeing the production of the core game systems. </li>
+                <li > Responsible for the implementation of all Virtual Reality mechanics and interactions. </li>
+                <li > Created Wacktory’s shader system from scratch to give the game its unique cartoony aesthetic.</li>
+                <li> Tested and finalized game builds at various stages of production, including submission of the final build to 
+                    <a href="https://store.steampowered.com/app/1082750/Wacktory/">Steam</a>. 
+                </li>
+            </ul>
             <br/>
         </ProjectContainer>
         {/* ------------------------------------------------------------------------------------------------------- */}
@@ -85,17 +86,15 @@ function Portfolio(): JSX.Element {
             src = "/games/alienInvasion/index.html"
         >
             <p> Alien Invasion is a top-down, rogue-lite shooter where the player must escape the city while fighting waves of enemies. 
-                Built with the Phaser framework for JavaScript, Alien Invasion offers a fast paced shoot-em-up experience playable 
+                Built with the <a href='https://phaser.io/'>Phaser framework</a> for JavaScript, Alien Invasion offers a fast paced shoot-em-up experience playable 
                 directly in-browser and is available to play below!
             </p>
-            <p> Developed as a team of five at UCSC, we were tasked with creating a game whose theme relates to current events.
-                With the presidential election being the forefront of current events at the time, Alien Invasion is a satirical 
-                illustration of how many citizens perceived Donald Trump's approach to external affairs policies.
-            </p>
             Roles on the project:
-            <li>Created the majority of art assets including the player, enemies, and environment.</li>
-            <li>Handled Level design and implementation of tilemap based functionality of displaying levels</li>
-            <li>Implemented some of the Functionality for weapon handling and tracking.</li>
+            <ul>
+                <li>Created the majority of art assets including the player, enemies, and environment.</li>
+                <li>Handled Level design and implementation of tilemap based functionality of displaying levels</li>
+                <li>Implemented some of the Functionality for weapon handling and tracking.</li>
+            </ul>
 
 
         </ProjectContainer>
@@ -104,12 +103,12 @@ function Portfolio(): JSX.Element {
             title="Falling Up (JS) - 2017"
             src = "/games/fallingUp/EndlessRunnerGame/index.html"
         >
-            <p>
-            An endless runner game created as a solo project over the span of a week to familiarize myself with the Phaser 
-            framework for JavaScript. The level is procedurally generated from predefined segments and checks to ensure that 
-            every pattern is possible to overcome. Try to stay alive as long as possible by inverting gravity to avoid 
-            running/falling off the screen. The game is fully playable in-browser and is available to try below! 
-            *Artwork and sounds taken from opengameart.org
+            <p> An endless runner game created as a solo project over the span of a week to familiarize myself with the 
+                <a href='https://phaser.io/'> Phaser framework</a> for JavaScript. The level is procedurally generated from 
+                predefined segments and checks to ensure that every pattern is possible to overcome. Try to stay alive as 
+                long as possible by inverting gravity to avoid running/falling off the screen. The game is fully playable 
+                in-browser and is available to try below! 
+                *Artwork and sounds taken from <a href='https://opengameart.org/'> opengameart.org</a>
             </p>
             
         </ProjectContainer>
@@ -118,11 +117,11 @@ function Portfolio(): JSX.Element {
             title="StarCraft II AI Bot (C++) - 2018"
             src="https://www.youtube.com/embed/1jSNsDg4DbE" 
         >
-            <p> Courtesy of Blizzard Entertainment, we utilized Starcraft II's open API to develop our very own Starcraft II bot. 
-                Using this API, we implemented our AI by employing a behavioral tree approach where our bot would prioritize tasks 
-                based upon what it knows about the game state at any given time. As Starcraft II is a game of imperfect 
-                information due to its "fog of war" mechanic for hiding enemy units out of the range of view, 
-                we taught our AI to seek out information in real-time to decide wether or not its better to attack, expand, defend, etc.
+            <p> Courtesy of Blizzard Entertainment, we utilized <a href='https://github.com/Blizzard/s2client-api'> Starcraft II's 
+                open API</a> to develop our very own Starcraft II bot. Using this API, we implemented our AI by employing a behavioral 
+                tree approach where our bot would prioritize tasks based upon what it knows about the game state at any given time. 
+                As Starcraft II is a game of imperfect information due to its "fog of war" mechanic for hiding enemy units out of the range 
+                of view, we taught our AI to seek out information in real-time to decide wether or not its better to attack, expand, defend, etc.
             </p>
 
             <p> We set out with the goal of having our AI beat Blizzard's easy bot and focused specifically on having our bot play as 
@@ -130,9 +129,12 @@ function Portfolio(): JSX.Element {
                 set to medium difficulty. Our AI works on any map and against any opposing race with the only restriction being our 
                 bot must play the Terran race. Check it out in action below!
             </p>
-            Roles on the project:
-            <li>Handled enemy base scouting procedure to learn where to attack.</li>
-            <li>Implemented combat unit micro play for fighting enemy's army which included advanced techniques such as stutter stepping for marines.</li>
+            <span>Roles on the project:</span>
+            <ul>
+                <li>Handled enemy base scouting procedure to learn where to attack.</li>
+                <li>Implemented combat unit micro play for fighting enemy's army which included advanced techniques such as stutter stepping for marines.</li>
+            </ul>
+            
         
         </ProjectContainer>
         {/* ------------------------------------------------------------------------------------------------------- */}
@@ -140,14 +142,17 @@ function Portfolio(): JSX.Element {
             title="Recedence (GML) - 2017"
             src="https://www.youtube.com/embed/b4rHiEosOH4"
         >
-            Recedence is a simple combat-driven platformer built in Gamemaker Studio by a team of two as a means to practice 
-            game development in a team environment. While the game itself isn't anything impressive in its own light, the 
-            game served as a core foundation for learning git file management and splitting tasks between people.
-            <br></br>
-            <br></br>
-            Roles on the project:
-            <li>Artwork and level layout for all four levels.</li>
-            <li>AI pathing and combat towards the player.</li>
+            <p> <a href='https://ninjacat74.itch.io/recedence'>Recedence</a> is a simple combat-driven platformer built in 
+                Gamemaker Studio by a team of two as a means to practice game development in a team environment. While the 
+                game itself isn't anything impressive in its own light, the game served as a core foundation for learning 
+                git file management and splitting tasks between people.
+            </p>
+            <span>Roles on the project:</span>
+            <ul>
+                <li>Artwork and level layout for all four levels.</li>
+                <li>AI pathing and combat towards the player.</li>
+            </ul>
+            
             
         </ProjectContainer>
         {/* ------------------------------------------------------------------------------------------------------- */}
@@ -155,10 +160,22 @@ function Portfolio(): JSX.Element {
             title="Virus Assault (Blitz Basic) - 2015"
             src="https://www.youtube.com/embed/Rbgxp8KMgQc"
         >
-            Developed with the help of two friends in high school as my first "complete" video game, Virus Assault is a top-down tower defense game where you play as an IT worker named "Bob" who must protect his system from the infiltrating viruses. Created for the 2015 Future Business Leaders of America Leadership Conference's state competition for the event "Computer Game & Simulation, our team showcased our game live in front of a panel of judges. Here, we achieved first place in the state of California over all the other competing schools. This qualified us to present at the National Leadership Conference in Chicago where only the top three teams from each state could advance. Out of the 75 teams who qualified and competed nationally, we placed fifth in the nation.
-
-            <li>I handled for all of the coding for this project as well as some of the artwork.</li>
-            
+            <p> Developed with the help of two friends in high school as my first "complete" video game,
+                <a href='https://ninjacat74.itch.io/virus-assault'> Virus Assault</a> is a top-down tower 
+                defense game where you play as an IT worker named "Bob" who must protect his system from 
+                the infiltrating viruses. Created for the 2015 <a href='https://www.fbla-pbl.org/about/'>Future Business 
+                Leaders of America</a> Leadership Conference's <a href='https://www.cafbla.org/domain/30'>state competition</a> 
+                for the event "Computer Game & Simulation, our team showcased our game live in front of a panel of judges. Here,
+                we achieved <a href='https://www.cafbla.org/site/handlers/filedownload.ashx?moduleinstanceid=2391&dataid=2597&FileName=2015-SLC-Top-10-Winners.pdf'> 
+                first place in the state of California</a> over all the other competing schools. This qualified us to present 
+                at the <a href='https://www.fbla-pbl.org/conferences/'> National Leadership Conference</a> in Chicago where 
+                only the top three teams from each state could advance. Out of the 75 teams who qualified and competed nationally,
+                we placed <a href='https://www.turlockjournal.com/news/education/pitman-students-place-fifth-in-national-fbla-conference/'>
+                fifth in the nation</a>.
+            </p>
+            <ul>
+                <li>I handled for all of the coding for this project as well as some of the artwork.</li>
+            </ul>     
         </ProjectContainer>
         {/* ------------------------------------------------------------------------------------------------------- */}
         <ProjectContainer 
